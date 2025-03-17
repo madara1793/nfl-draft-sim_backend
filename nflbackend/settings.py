@@ -143,7 +143,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+import os
 import pymongo
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 DATABASES = {
     'default': {
@@ -153,6 +158,6 @@ DATABASES = {
 }
 
 # MongoDB Connection
-MONGO_CLIENT = pymongo.MongoClient("mongodb+srv://brody:kagakunin@cluster.njli8.mongodb.net/")
+MONGO_CLIENT = pymongo.MongoClient(os.getenv("MONGO_URI"))
 MONGO_DB = MONGO_CLIENT["nfl_database"]
 
