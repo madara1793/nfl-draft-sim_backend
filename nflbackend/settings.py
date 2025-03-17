@@ -161,3 +161,6 @@ DATABASES = {
 MONGO_CLIENT = pymongo.MongoClient(os.getenv("MONGO_URI"))
 MONGO_DB = MONGO_CLIENT["nfl_database"]
 
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+
+PORT = os.getenv('PORT', '8000')
