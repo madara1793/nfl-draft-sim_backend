@@ -163,4 +163,4 @@ MONGO_DB = MONGO_CLIENT["nfl_database"]
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
-PORT = os.getenv('PORT', '8000')
+PORT = os.getenv('PORT', '10000')
